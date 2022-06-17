@@ -31,7 +31,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 					level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-client = pymongo.MongoClient("https://data.mongodb-api.com/app/data-siqnz/endpoint/data/v1")
+client = pymongo.MongoClient("mongodb+srv://dkmaster:dheeraj1234@cluster0.jqczy.mongodb.net/?retryWrites=true&w=majority")
 db = client.credit_cards
 
 developers = ['809309749']
