@@ -32,9 +32,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-client = pymongo.MongoClient(
-	
-	)# MONGO DB LINK 
+client = pymongo.MongoClient(https://data.mongodb-api.com/app/data-siqnz/endpoint/data/v1)# MONGO DB LINK 
 db = client.credit_cards
 
 developers = ['809309749']
