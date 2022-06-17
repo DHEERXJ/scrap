@@ -55,13 +55,13 @@ elif mode == "prod":
 		PORT = int(os.environ.get("PORT", "8443"))
 		HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
 		updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=tk)
-		updater.bot.set_webhook(f"https://{HEROKU_APP_NAME}.herokuapp.com/"+ tk)
+		updater.bot.set_webhook(f"https://https://{HEROKU_APP_NAME}.railway.app/"+ tk)
 else:
 	sys.exit()
 
 @run_async
 def start(update):
-	update.message.reply_text("This CC Scraper has been started successfully | Developed by [𝕭𝖔𝕲] Emilio")
+	update.message.reply_text("This CC Scraper has been started successfully | Developed by ASUR")
 
 @run_async
 def extrct(update, context):
