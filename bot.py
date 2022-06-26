@@ -40,7 +40,7 @@ developers = ['809309749']
 addusr = ""
 tk = os.getenv("TOKEN")
 mode = os.getenv("MODE")
-chat_idd = str(update.message.chat_id)
+
 posting_channel = os.getenv("CHAT_ID_FORWARD")
 
 if mode == "dev":
@@ -57,7 +57,8 @@ else:
 	sys.exit()
 
 @run_async
-def start(update,chat_idd,context):
+def start(update,context):
+	chat_idd = str(update.message.chat_id)
 	textt ="The CC Scraper has been started!!| Developed by ASUR"
 	context.bot.send_message(
 				chat_id=chat_idd,
