@@ -40,7 +40,7 @@ developers = ['809309749']
 addusr = ""
 tk = os.getenv("TOKEN")
 mode = os.getenv("MODE")
-
+chat_idd = str(update.message.chat_id)
 posting_channel = os.getenv("CHAT_ID_FORWARD")
 
 if mode == "dev":
@@ -57,8 +57,14 @@ else:
 	sys.exit()
 
 @run_async
-def start(update):
-	update.message.reply_text("This CC Scraper has been started successfully | Developed by ASUR")
+def start(update,chat_idd,context):
+	textt ="The CC Scraper has been started!!| Developed by ASUR"
+	context.bot.send_message(
+				chat_id=chat_idd,
+				text=textt,
+				parse_mode='HTML'
+						)
+	
 
 @run_async
 def extrct(update, context):
@@ -66,6 +72,7 @@ def extrct(update, context):
 	gex = ['-11111111111'] #To exclude groups from scraping
 
 	try:
+		
 		chat_id = str(update.message.chat_id)
 	except:
 	   pass
